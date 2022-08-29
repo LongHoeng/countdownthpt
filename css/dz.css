@@ -1,0 +1,159 @@
+html,
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color:var(--body);
+    height: 100%;
+}
+@font-face {
+    font-family: AvertaRegular;
+    src: url("../fonts/Averta-Regular.otf");
+}
+
+.backgroundd{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../image/background3.png);
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+     background-size:100% 100%;
+}
+@media only screen and (max-width: 600px) {
+   .backgroundd { background-attachment: initial;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://cdn.wallpapersafari.com/7/86/LIC7gK.jpg);
+
+
+    height: auto;
+    width: auto;
+    }
+}
+.long{
+    
+    min-height : 100%;
+    min-width : 100%;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: -100;
+}
+
+.row{
+    font-style: italic;
+}
+
+
+.object {
+    width: 90px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.774);
+}
+
+.object-description{
+    font-size: 16px;
+    font-weight: bolder;
+    background: rgba(255, 160, 82, 0.637);
+}
+
+.datetime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    font-family: AvertaBold;
+}
+@media screen and (max-width: 680px) and (min-width:0px){
+    .buttonfs{
+        padding-left: 312em;
+        width: 85px;display: inline-table;max-height:80px;
+    }
+    
+}
+button {
+    background-color: rebeccapurple;
+    border-radius: 7px;
+    box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: transform 0.1s linear, box-shadow 0.1s linear;
+    z-index: 10;
+    left: 75vh;
+    bottom:-5vh;
+}
+@media screen and (max-width: 680px) and (min-width:0px){
+    .buttonfs{ border-radius: 6px;
+        box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+        border: none;
+        width: auto;
+        height: 45px;
+        color: white;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        position: relative;
+        transition: transform 0.1s linear, box-shadow 0.1s linear;
+        left: 20vh;
+        font-style: normal;
+        display: inline-block;
+         vertical-align: top;
+         font-size: 17px; cursor: pointer;}
+    }
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 rebeccapurple;
+}
+
+button:focus {
+    outline: none;
+}
+
+.particle {
+    --x: 0;
+    --y: 0;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    z-index: -1;
+}
+
+.particle.move {
+    animation: move 1000ms linear forwards;
+}
+
+@keyframes move {
+    to {
+        transform: translate(var(--x), var(--y));
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
